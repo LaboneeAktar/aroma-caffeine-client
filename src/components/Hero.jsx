@@ -9,7 +9,8 @@ const Hero = () => {
           backgroundImage: `url(${bannerImg})`,
         }}
       >
-        <div className="absolute bg-amber-900"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
+
         <div className="px-10 absolute lg:-right-0 text-white lg:max-w-1/2 lg:pr-10">
           <h2 className="text-2xl md:text-4xl font-dancing font-extrabold mb-4">
             Would you like a Cup of Delicious Coffee?
@@ -19,7 +20,7 @@ const Hero = () => {
             nostalgia back! Your companion of every moment. Enjoy the beautiful
             moments and make them memorable.
           </p>
-          <button className=" bg-coffee-brown text-lg text-black px-3 py-2 font-dancing font-bold rounded-sm">
+          <button className=" bg-coffee-brown border-coffee-brown text-lg text-black px-3 py-2 font-dancing font-bold rounded-sm hover:bg-transparent hover:border hover:text-white">
             Learn More
           </button>
         </div>

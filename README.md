@@ -14,4 +14,4 @@
   - [Poppins](https://fonts.google.com/specimen/Poppins)
 
 - Icons - [React Icon](https://react-icons.github.io/react-icons/)
-- Toast - [React Hot Toast](https://react-hot-toast.com/)
+- Alert - [SweetAlerts2](https://sweetalert2.github.io/)

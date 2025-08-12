@@ -1,9 +1,11 @@
 import bgImage from "../assets/CoffeeBG.png";
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AddCoffee = () => {
+  const navigate = useNavigate();
+
   const handleAddCoffee = (event) => {
     event.preventDefault();
 
@@ -53,6 +55,7 @@ const AddCoffee = () => {
             width: 400,
           });
           form.reset();
+          navigate("/");
         }
       })
       .catch((error) => console.error(error));

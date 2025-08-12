@@ -1,8 +1,9 @@
 import { FaEye, FaTrash } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
+// import Swal from "sweetalert2";
 
-const CoffeeCard = ({ coffee }) => {
-  const { name, chef, price, photo } = coffee;
+const CoffeeCard = ({ coffee, handleDelete }) => {
+  const { _id, name, chef, price, photo } = coffee;
 
   return (
     <div className="w-full">
@@ -37,7 +38,10 @@ const CoffeeCard = ({ coffee }) => {
           <button className="bg-[#3C393B] text-white p-2 rounded cursor-pointer">
             <MdEdit />
           </button>
-          <button className="bg-[#EA4744] text-white p-2 rounded cursor-pointer">
+          <button
+            onClick={() => handleDelete(_id)}
+            className="bg-[#EA4744] text-white p-2 rounded cursor-pointer"
+          >
             <FaTrash />
           </button>
         </div>

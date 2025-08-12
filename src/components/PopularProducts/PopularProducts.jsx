@@ -3,6 +3,8 @@ import { GiCoffeeCup } from "react-icons/gi";
 import CoffeeCard from "./CoffeeCard";
 import bgCup from "../../assets/BgCup.png";
 import bgHouse from "../../assets/bgHouse.png";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const PopularProducts = () => {
   const [allCoffee, setAllCoffee] = useState([]);
@@ -18,6 +20,47 @@ const PopularProducts = () => {
       });
   }, []);
 
+  const handleDelete = (_id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      iconColor: "#EA4744",
+      showCancelButton: true,
+      confirmButtonColor: "#EA4744",
+      cancelButtonColor: "#331a15",
+      confirmButtonText: "Yes, Delete",
+      color: "#331a15",
+      background: "#d2b48c",
+      width: 400,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/coffee/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your Coffee has been deleted.",
+                icon: "success",
+                iconColor: "#023020",
+                confirmButtonColor: "#331a15",
+                color: "#331a15",
+                background: "#d2b48c",
+                width: 400,
+              });
+              const remainingCoffee = allCoffee.filter(
+                (coffee) => coffee._id !== _id
+              );
+              setAllCoffee(remainingCoffee);
+            }
+          });
+      }
+    });
+  };
+
   return (
     <div className="mb-20 relative">
       <div className="absolute top-0 left-0">
@@ -32,14 +75,20 @@ const PopularProducts = () => {
           Our Popular Products
         </h4>
         <div className="text-center mt-5">
-          <button className="btn bg-coffee-brown text-coffee text-shadow-lg/30 text-shadow-coffee px-4 py-1 border-coffee/65 hover:bg-transparent">
-            <span> Add Coffee</span> <GiCoffeeCup className="w-6 h-6" />
-          </button>
+          <Link to="/addCoffee">
+            <button className="btn bg-coffee-brown text-coffee text-shadow-lg/30 text-shadow-coffee px-4 py-1 border-coffee/65 hover:bg-transparent">
+              <span> Add Coffee</span> <GiCoffeeCup className="w-6 h-6" />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="mt-14 max-w-9/12 mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-5">
         {displayedCoffees.map((coffee) => (
-          <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>
+          <CoffeeCard
+            key={coffee._id}
+            coffee={coffee}
+            handleDelete={handleDelete}
+          ></CoffeeCard>
         ))}
       </div>
 

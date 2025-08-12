@@ -1,4 +1,4 @@
-import ContactUs from "../components/ContactUs";
+import ContactUs from "../components/Footer/ContactUs";
 import Features from "../components/Features";
 import Hero from "../components/Hero";
 import Instagram from "../components/Instagram";
@@ -11,7 +11,6 @@ const Home = () => {
       <Features />
       <PopularProducts />
       <Instagram />
-      <ContactUs />
     </div>
   );
 };

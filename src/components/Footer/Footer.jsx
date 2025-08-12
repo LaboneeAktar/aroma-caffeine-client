@@ -1,4 +1,4 @@
-import footerBg from "../assets/footer-bg.png";
+import footerBg from "../../assets/footer-bg.png";
 
 const Footer = () => {
   return (

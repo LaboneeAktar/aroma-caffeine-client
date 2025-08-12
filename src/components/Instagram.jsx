@@ -9,7 +9,7 @@ import coffee8 from "../assets/instagram/coffee-8.png";
 
 const Instagram = () => {
   return (
-    <div className="max-w-9/12 mx-auto mb-20">
+    <div className="max-w-10/12 lg:max-w-9/12 mx-auto mb-20">
       <div>
         <p className="text-center text-coffee/65">--- Follow Us Now ---</p>
         <h4 className="text-3xl font-extrabold font-dancing text-coffee text-center text-shadow-lg/50 text-shadow-coffee">

@@ -75,7 +75,7 @@ const PopularProducts = () => {
 
   return (
     <div className="mb-20 relative">
-      <div className="absolute top-0 left-0">
+      <div className="hidden lg:block absolute top-0 left-0">
         <img className="h-64 object-fill" src={bgCup} alt="" />
       </div>
       <div className="absolute top-40 right-0">
@@ -94,7 +94,7 @@ const PopularProducts = () => {
           </Link>
         </div>
       </div>
-      <div className="mt-14 max-w-9/12 mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div className="mt-14 max-w-10/12 lg:max-w-9/12 mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-5">
         {displayedCoffees.map((coffee) => (
           <CoffeeCard
             key={coffee._id}

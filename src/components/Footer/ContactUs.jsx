@@ -5,8 +5,8 @@ import {
   FaPhoneAlt,
   FaTwitter,
 } from "react-icons/fa";
-import contactBg from "../assets/contact-us-bg.png";
-import logo from "../assets/Logo.png";
+import contactBg from "../../assets/contact-us-bg.png";
+import logo from "../../assets/Logo.png";
 import { MdMarkEmailUnread } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 

@@ -8,9 +8,9 @@ const CoffeeCard = ({ coffee, handleDelete }) => {
 
   return (
     <div className="w-full">
-      <div className=" flex justify-center items-center gap-5 bg-gray-100 shadow-lg px-6 py-8 rounded-lg">
-        {/* Image Container */}
-        <div className="w-36 h-36">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-5 bg-gray-100 shadow-lg px-6 py-8 rounded-lg">
+        {/* Image */}
+        <div className="w-full md:w-36 h-48 md:h-36">
           <img
             src={photo}
             alt={name}
@@ -18,8 +18,8 @@ const CoffeeCard = ({ coffee, handleDelete }) => {
           />
         </div>
 
-        {/* Text Section */}
-        <div className="flex-1">
+        {/* Text */}
+        <div className="flex-1 text-center md:text-left lg:ml-3">
           <p>
             <span className="font-semibold">Name:</span> {name}
           </p>
@@ -32,7 +32,7 @@ const CoffeeCard = ({ coffee, handleDelete }) => {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col gap-2 z-10">
+        <div className="flex md:flex-col gap-2 mt-2 md:mt-0 z-10">
           <button className="bg-coffee-gray text-white p-2 rounded cursor-pointer">
             <FaEye />
           </button>

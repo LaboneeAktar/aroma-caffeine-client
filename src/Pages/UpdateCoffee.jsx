@@ -67,7 +67,7 @@ const UpdateCoffee = () => {
 
   return (
     <div
-      className="bg-cover h-[300px] object-fit"
+      className="bg-cover h-full"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
@@ -85,7 +85,7 @@ const UpdateCoffee = () => {
             Back to Home
           </Link>
         </span>
-        <div className="bg-[#F4F3F0] rounded-lg">
+        <div className="bg-[#F4F3F0] rounded-lg mb-10 lg:mb-32">
           <div className="text-center">
             <h4 className="text-3xl font-dancing font-extrabold text-coffee pt-14 text-shadow-lg/50 text-shadow-coffee">
               Update Existing Coffee Details

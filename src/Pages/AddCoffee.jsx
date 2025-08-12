@@ -20,13 +20,13 @@ const AddCoffee = () => {
 
     const newCoffee = {
       name,
-      chefName: chef,
+      chef,
       supplier,
       taste,
       category,
       details,
       price,
-      photoURL: photo,
+      photo,
     };
     // console.log(newCoffee);
 

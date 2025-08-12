@@ -83,7 +83,7 @@ const PopularProducts = () => {
       </div>
       <div>
         <p className="text-center text-coffee/65">--- Sip & Savor ---</p>
-        <h4 className="text-3xl font-extrabold font-dancing text-coffee text-center">
+        <h4 className="text-3xl font-extrabold font-dancing text-coffee text-center text-shadow-lg/50 text-shadow-coffee">
           Our Popular Products
         </h4>
         <div className="text-center mt-5">

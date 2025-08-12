@@ -1,5 +1,6 @@
 import Features from "../components/Features";
 import Hero from "../components/Hero";
+import Instagram from "../components/Instagram";
 import PopularProducts from "../components/PopularProducts/PopularProducts";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Hero />
       <Features />
       <PopularProducts />
+      <Instagram />
     </div>
   );
 };

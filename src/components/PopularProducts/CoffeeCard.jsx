@@ -1,5 +1,6 @@
 import { FaEye, FaTrash } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
+import { Link } from "react-router-dom";
 // import Swal from "sweetalert2";
 
 const CoffeeCard = ({ coffee, handleDelete }) => {
@@ -35,9 +36,11 @@ const CoffeeCard = ({ coffee, handleDelete }) => {
           <button className="bg-coffee-gray text-white p-2 rounded cursor-pointer">
             <FaEye />
           </button>
-          <button className="bg-[#3C393B] text-white p-2 rounded cursor-pointer">
-            <MdEdit />
-          </button>
+          <Link to={`/updateCoffee/${_id}`}>
+            <button className="bg-[#3C393B] text-white p-2 rounded cursor-pointer">
+              <MdEdit />
+            </button>
+          </Link>
           <button
             onClick={() => handleDelete(_id)}
             className="bg-[#EA4744] text-white p-2 rounded cursor-pointer"

@@ -5,20 +5,32 @@ import bgCup from "../../assets/BgCup.png";
 import bgHouse from "../../assets/bgHouse.png";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import Loader from "../Loader";
 
 const PopularProducts = () => {
   const [allCoffee, setAllCoffee] = useState([]);
   const [showAll, setShowAll] = useState(false);
-
-  const displayedCoffees = showAll ? allCoffee : allCoffee.slice(0, 6);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/coffee")
+    setLoading(true);
+    fetch("http://localhost:5000/coffees")
       .then((res) => res.json())
       .then((data) => {
         setAllCoffee(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error loading coffees:", err);
+        setLoading(false);
       });
   }, []);
+
+  const displayedCoffees = showAll ? allCoffee : allCoffee.slice(0, 6);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   const handleDelete = (_id) => {
     Swal.fire({
@@ -35,7 +47,7 @@ const PopularProducts = () => {
       width: 400,
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/coffee/${_id}`, {
+        fetch(`http://localhost:5000/coffees/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

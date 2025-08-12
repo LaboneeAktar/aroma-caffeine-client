@@ -37,7 +37,7 @@ const UpdateCoffee = () => {
     };
 
     //send data to the server
-    fetch(`http://localhost:5000/coffee/${_id}`, {
+    fetch(`http://localhost:5000/coffees/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

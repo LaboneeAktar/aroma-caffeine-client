@@ -30,10 +30,9 @@ const AddCoffee = () => {
       price,
       photo,
     };
-    // console.log(newCoffee);
 
     //send data to the server
-    fetch(`http://localhost:5000/coffee`, {
+    fetch(`http://localhost:5000/coffees`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -1,3 +1,4 @@
+import ContactUs from "../components/ContactUs";
 import Features from "../components/Features";
 import Hero from "../components/Hero";
 import Instagram from "../components/Instagram";
@@ -10,6 +11,7 @@ const Home = () => {
       <Features />
       <PopularProducts />
       <Instagram />
+      <ContactUs />
     </div>
   );
 };

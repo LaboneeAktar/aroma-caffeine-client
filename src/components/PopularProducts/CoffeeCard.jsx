@@ -1,7 +1,6 @@
 import { FaEye, FaTrash } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 import { Link } from "react-router-dom";
-// import Swal from "sweetalert2";
 
 const CoffeeCard = ({ coffee, handleDelete }) => {
   const { _id, name, chef, price, photo } = coffee;
@@ -33,9 +32,11 @@ const CoffeeCard = ({ coffee, handleDelete }) => {
 
         {/* Action Buttons */}
         <div className="flex md:flex-col gap-2 mt-2 md:mt-0 z-10">
-          <button className="bg-coffee-gray text-white p-2 rounded cursor-pointer">
-            <FaEye />
-          </button>
+          <Link to={`/viewDetails/${_id}`}>
+            <button className="bg-coffee-gray text-white p-2 rounded cursor-pointer">
+              <FaEye />
+            </button>{" "}
+          </Link>
           <Link to={`/updateCoffee/${_id}`}>
             <button className="bg-[#3C393B] text-white p-2 rounded cursor-pointer">
               <MdEdit />

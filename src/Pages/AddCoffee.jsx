@@ -68,7 +68,7 @@ const AddCoffee = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="w-10/12 mx-auto">
+      <div className="w-9/12 mx-auto">
         <span className="flex items-center gap-3">
           <Link to="/">
             <FaArrowLeft />

@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import AddCoffee from "../Pages/AddCoffee";
 import UpdateCoffee from "../Pages/UpdateCoffee";
 import Loader from "../components/Loader";
+import ViewDetails from "../Pages/ViewDetails";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,13 @@ export const router = createBrowserRouter([
       {
         path: "/updateCoffee/:id",
         element: <UpdateCoffee />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/coffees/${params.id}`),
+        HydrateFallback: () => <Loader />,
+      },
+      {
+        path: "/viewDetails/:id",
+        element: <ViewDetails />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/coffees/${params.id}`),
         HydrateFallback: () => <Loader />,

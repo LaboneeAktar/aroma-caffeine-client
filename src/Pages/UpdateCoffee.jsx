@@ -73,7 +73,7 @@ const UpdateCoffee = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="w-9/12 mx-auto">
+      <div className="max-w-10/12 lg:max-w-9/12 mx-auto">
         <span className="flex items-center gap-3">
           <Link to="/">
             <FaArrowLeft />
@@ -87,10 +87,10 @@ const UpdateCoffee = () => {
         </span>
         <div className="bg-[#F4F3F0] rounded-lg mb-10 lg:mb-32">
           <div className="text-center">
-            <h4 className="text-3xl font-dancing font-extrabold text-coffee pt-14 text-shadow-lg/50 text-shadow-coffee">
+            <h4 className="text-3xl font-dancing font-extrabold text-coffee pt-8 lg:pt-14 text-shadow-lg/50 text-shadow-coffee">
               Update Existing Coffee Details
             </h4>
-            <p className="text-sm text-coffee/60 max-w-4/6 mx-auto py-6">
+            <p className="text-justify lg:text-center text-sm text-coffee/60 lg:max-w-4/6 mx-auto px-4 lg:px-0 py-6">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal

@@ -15,7 +15,7 @@ const Navbar = () => {
         <img className="h-14 w-10" src={logo} alt="" />
         <Link to="/">
           {" "}
-          <h2 className="text-4xl text-white font-dancing">
+          <h2 className="text-4xl text-white font-dancing text-shadow-lg/50 text-shadow-coffee/50">
             Aroma Caffeine
           </h2>{" "}
         </Link>

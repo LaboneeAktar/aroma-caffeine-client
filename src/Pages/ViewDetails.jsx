@@ -15,7 +15,7 @@ const ViewDetails = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="w-9/12 mx-auto">
+      <div className="max-w-10/12 lg:max-w-9/12 mx-auto">
         <span className="flex items-center gap-3">
           <Link to="/">
             <FaArrowLeft />
@@ -28,9 +28,9 @@ const ViewDetails = () => {
           </Link>
         </span>
         <div className="mb-20">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10 bg-gray-100 shadow-lg px-20 py-8 rounded-lg">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 bg-gray-100 shadow-lg px-5 lg:px-20 py-8 rounded-lg">
             {/* Image */}
-            <div className="w-full md:w-96 h-48 md:h-96 py-4">
+            <div className="w-full md:w-96 h-56 md:h-96 lg:py-4 object-fit">
               <img
                 src={photo}
                 alt={name}

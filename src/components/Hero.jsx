@@ -9,20 +9,21 @@ const Hero = () => {
           backgroundImage: `url(${bannerImg})`,
         }}
       >
-        <div className="absolute inset-0 bg-black/70"></div>
-
-        <div className="px-10 absolute lg:-right-0 text-white lg:max-w-1/2 lg:pr-10">
-          <h2 className="text-2xl md:text-4xl font-dancing font-extrabold mb-4">
-            Would you like a Cup of Delicious Coffee?
-          </h2>
-          <p className="mb-3 font-poppins text-xs lg:text-sm font-light">
-            It's coffee time - Sip & Savor. Relaxation in every sip! Get the
-            nostalgia back! Your companion of every moment. Enjoy the beautiful
-            moments and make them memorable.
-          </p>
-          <button className=" bg-coffee-brown border-coffee-brown text-lg text-black px-4 py-2 font-dancing font-bold rounded-sm hover:bg-transparent hover:border hover:text-white">
-            Learn More
-          </button>
+        <div className="absolute inset-0 bg-black/70 flex justify-center items-center">
+          <div className="px-10 text-center text-white ">
+            <h2 className="text-2xl md:text-4xl font-dancing font-extrabold mb-4 text-shadow-lg/50 text-shadow-coffee">
+              Would you like a Cup of Delicious Coffee?
+            </h2>
+            <p className="mb-3 text-xs lg:text-sm text-center text-coffee-gray">
+              It's coffee time - Sip & Savor. Relaxation in every sip! Get the
+              nostalgia back! <br /> Your companion of every moment. Enjoy the
+              beautiful moments and make them memorable.
+            </p>
+            <button className="btn bg-coffee-brown border-coffee-brown rounded-sm text-black text-lg font-dancing font-bold hover:bg-transparent hover:text-white">
+              {" "}
+              Learn More
+            </button>
+          </div>
         </div>
       </div>{" "}
     </div>

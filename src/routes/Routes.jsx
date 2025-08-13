@@ -5,11 +5,13 @@ import AddCoffee from "../Pages/AddCoffee";
 import UpdateCoffee from "../Pages/UpdateCoffee";
 import Loader from "../components/Loader";
 import ViewDetails from "../Pages/ViewDetails";
+import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

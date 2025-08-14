@@ -14,7 +14,7 @@ const PopularProducts = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:5000/coffees")
+    fetch("https://aroma-caffeine-server.vercel.app/coffees")
       .then((res) => res.json())
       .then((data) => {
         setAllCoffee(data);
@@ -47,7 +47,7 @@ const PopularProducts = () => {
       width: 400,
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/coffees/${_id}`, {
+        fetch(`https://aroma-caffeine-server.vercel.app/coffees/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

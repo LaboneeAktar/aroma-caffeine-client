@@ -25,14 +25,18 @@ export const router = createBrowserRouter([
         path: "/updateCoffee/:id",
         element: <UpdateCoffee />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/coffees/${params.id}`),
+          fetch(
+            `https://aroma-caffeine-server.vercel.app/coffees/${params.id}`
+          ),
         HydrateFallback: () => <Loader />,
       },
       {
         path: "/viewDetails/:id",
         element: <ViewDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/coffees/${params.id}`),
+          fetch(
+            `https://aroma-caffeine-server.vercel.app/coffees/${params.id}`
+          ),
         HydrateFallback: () => <Loader />,
       },
     ],

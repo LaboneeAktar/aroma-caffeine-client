@@ -37,7 +37,7 @@ const UpdateCoffee = () => {
     };
 
     //send data to the server
-    fetch(`https://aroma-caffeine-server.vercel.app/coffees/${_id}`, {
+    fetch(`https://aroma-caffeine-server-omega.vercel.app/coffees/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

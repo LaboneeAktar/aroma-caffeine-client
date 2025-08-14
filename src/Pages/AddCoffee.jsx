@@ -32,7 +32,7 @@ const AddCoffee = () => {
     };
 
     //send data to the server
-    fetch(`https://aroma-caffeine-server.vercel.app/coffees`, {
+    fetch(`https://aroma-caffeine-server-omega.vercel.app/coffees`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -6,6 +6,7 @@ import UpdateCoffee from "../Pages/UpdateCoffee";
 import Loader from "../components/Loader";
 import ViewDetails from "../Pages/ViewDetails";
 import ErrorPage from "../Pages/ErrorPage";
+import About from "../Pages/About";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
       {
         path: "/addCoffee",

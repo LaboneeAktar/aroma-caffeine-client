@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bannerImg from "../assets/Banner.png";
 
 const Hero = () => {
@@ -19,10 +20,13 @@ const Hero = () => {
               nostalgia back! <br /> Your companion of every moment. Enjoy the
               beautiful moments and make them memorable.
             </p>
-            <button className="btn bg-coffee-brown border-coffee-brown rounded-sm text-black text-lg font-dancing font-bold hover:bg-transparent hover:text-white">
+            <Link to="/about">
               {" "}
-              Learn More
-            </button>
+              <button className="btn bg-coffee-brown border-coffee-brown rounded-sm text-black text-lg font-dancing font-bold hover:bg-transparent hover:text-white">
+                {" "}
+                Learn More
+              </button>
+            </Link>
           </div>
         </div>
       </div>{" "}

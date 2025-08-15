@@ -94,7 +94,10 @@ const PopularProducts = () => {
           </Link>
         </div>
       </div>
-      <div className="mt-14 max-w-10/12 lg:max-w-9/12 mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div
+        id="popular-products"
+        className="mt-14 max-w-10/12 lg:max-w-9/12 mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-5"
+      >
         {displayedCoffees.map((coffee) => (
           <CoffeeCard
             key={coffee._id}

@@ -1,4 +1,3 @@
-import { PhotoProvider, PhotoView } from "react-photo-view";
 import coffee1 from "../assets/instagram/coffee-1.png";
 import coffee2 from "../assets/instagram/coffee-2.png";
 import coffee3 from "../assets/instagram/coffee-3.png";
@@ -27,15 +26,12 @@ const Instagram = () => {
           Follow on Instagram
         </h4>
       </div>
-      <PhotoProvider>
-        <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-5 foo">
-          {images.map((item, index) => (
-            <PhotoView key={index} src={item}>
-              <img src={item} alt="" />
-            </PhotoView>
-          ))}
-        </div>
-      </PhotoProvider>
+
+      <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-5 foo">
+        {images.map((item, index) => (
+          <img src={item} key={index} alt="" />
+        ))}
+      </div>
     </div>
   );
 };

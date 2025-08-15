@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
         element: <UpdateCoffee />,
         loader: ({ params }) =>
           fetch(
-            `https://aroma-caffeine-server-omega.vercel.app/coffees/${params.id}`
+            `https://aroma-caffeine-server.onrender.com/coffees/${params.id}`
           ),
         HydrateFallback: () => <Loader />,
       },
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
         element: <ViewDetails />,
         loader: ({ params }) =>
           fetch(
-            `https://aroma-caffeine-server-omega.vercel.app/coffees/${params.id}`
+            `https://aroma-caffeine-server.onrender.com/coffees/${params.id}`
           ),
         HydrateFallback: () => <Loader />,
       },
